@@ -16,7 +16,10 @@ main
   padding-left: 6%
   text-align: justify
   text-justify: inter-word
-
+.avatar
+  border-radius: 100%
+  height: 30em
+  width: 30em
 section
   text-align: center
   padding: 3%
@@ -26,11 +29,23 @@ section
     font-size: 2em
   a
     font-size: 2em
+.thebr1
+  display: none
 
+.techstack
+  .techlogo
+    height: 190px
+    width: 190px
+    padding: 5px
 
 @media all and (max-width: 650px)
   .thebr
     display: none
+  .thebr1
+    display: block
+  .avatar
+    width: 20em
+    height: 20em
   main
     div
       top: 38%
@@ -47,3 +62,11 @@ section
       font-size: 1.2em
     a
       font-size: 1.5em
+  .techstack
+    .techlogo
+      height: 100px
+      width: 100px
+@media all and (max-width: 500px)
+   .avatar
+    width: 18em
+    height: 18em
