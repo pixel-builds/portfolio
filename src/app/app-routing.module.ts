@@ -10,11 +10,11 @@ import { MyDetailsComponent } from './home/my-details/my-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  // { path: 'about', component: MyDetailsComponent },
-  // { path: 'projects/:id', component: ProjectDetailsComponent },
-  // { path: 'posts', component: PostsComponent },
-  // { path: 'blogs', component: BlogComponent },
-  // { path: 'blogs/:id', component: BlogDetailsComponent }
+  { path: 'about', component: MyDetailsComponent },
+  { path: 'projects/:id', component: ProjectDetailsComponent },
+  { path: 'posts', component: PostsComponent },
+  { path: 'blogs', component: BlogComponent },
+  { path: 'blogs/:id', component: BlogDetailsComponent }
 ];
 
 @NgModule({
