@@ -14,8 +14,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  // description() {
-  //   this.router.navigateByUrl('/about');
-  // }
+
+  desciption() {
+      this.router.navigateByUrl('/about');
+  }
 
 }

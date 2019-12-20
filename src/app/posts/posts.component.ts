@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from './post.service';
+import { Post } from './Post';
 
 @Component({
   selector: 'app-posts',
@@ -7,7 +8,7 @@ import { PostService } from './post.service';
   styleUrls: ['./posts.component.sass']
 })
 export class PostsComponent implements OnInit {
-posts: any;
+posts: Post;
   constructor(private postService: PostService) { }
 
  ngOnInit() {
