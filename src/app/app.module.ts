@@ -16,7 +16,8 @@ import { BlogDetailsComponent } from './blog/blog-details/blog-details.component
 import { PostsComponent } from './posts/posts.component';
 import { MyDetailsComponent } from './home/my-details/my-details.component';
 import { LoadingComponent } from './loading/loading.component';
-import { ProjectsComponent } from './projects/projects.component';
+import {PostService} from './posts/post.service';
+import {TweakService} from './home/tweak.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,6 @@ import { ProjectsComponent } from './projects/projects.component';
     PostsComponent,
     MyDetailsComponent,
     LoadingComponent,
-    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { ProjectsComponent } from './projects/projects.component';
     AngularFirestoreModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [PostService, TweakService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
