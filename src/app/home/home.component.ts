@@ -1,8 +1,8 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {TweakService} from './tweak.service';
-import {HomepageTweak} from './Homepage';
-import {Subscription} from 'rxjs';
+import { TweakService } from './tweak.service';
+import { HomepageTweak } from './Homepage';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +24,7 @@ tweakServiceSub: Subscription;
   }
 
   description() {
-      this.router.navigateByUrl('/about');
+      this.router.navigateByUrl('/about').then();
   }
 
   ngOnDestroy() {
