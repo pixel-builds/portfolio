@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'stiff';
+    src: url('./assets/StiffStaff-Heavy.ttf');
+}
+
+.stiff {
+    font-family: 'stiff', serif !important;
+}
