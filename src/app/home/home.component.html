@@ -37,10 +37,13 @@
 
   <section>
     <h1 class="stiff" style= "color: #FF1D53;">Projects</h1>
-    <br>
-    <div style="text-align: left;">
+    <br> <div *ngIf="projects">
+      <div style="text-align: left;" *ngFor="let project of projects">
       
-    <h2 class="head-1">Marvel</h2>
-    <p class="text-1" style="text-align: left;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, labore? Ullam libero eum illo non neque ad placeat accusamus quam et culpa distinctio alias minus, quod laudantium earum iure minima?</p>
+        <h2 class="head-1">{{ project.name }}</h2>
+        <p class="text-1" style="text-align: left;">{{ project.description }}</p>
+        <a (click)="visitProject(project.url)" class="link">Visit Site</a>
+        <br><p>
+        </div>
     </div>
   </section>

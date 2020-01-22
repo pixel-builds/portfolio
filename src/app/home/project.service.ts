@@ -10,7 +10,7 @@ project: AngularFirestoreCollection;
     this.project = this.afs.collection('projects');
   }
 
-  getProjects() {
-    return this.project.valueChanges({idFeild: 'id'})
+  public getProjects() {
+    return this.project.valueChanges({idField: 'id'})
   }
 }
