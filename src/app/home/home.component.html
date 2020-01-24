@@ -35,13 +35,13 @@
 
   <hr color="#FF1D53" style="border-bottom: 1px; width: 80%;">
 
-  <section>
+  <section style="width: 100%;">
     <h1 class="stiff" style= "color: #FF1D53;">Projects</h1>
     <br> <div *ngIf="projects">
       <div style="text-align: left;" *ngFor="let project of projects">
       
-        <h2 class="head-1">{{ project.name }}</h2>
-        <p class="text-1" style="text-align: left;">{{ project.description }}</p>
+        <h2 class="head-2">{{ project.name }}</h2>
+        <p class="text-1 just" style="text-align: left;">{{ project.description }}</p>
         <a (click)="visitProject(project.url)" class="link">Visit Site</a>
         <br><p>
         </div>
