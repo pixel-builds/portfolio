@@ -22,7 +22,7 @@ projectSub: Subscription;
   ) {
     this.projectSub = this.projectService.getProjects().subscribe(data => {
       this.projects = data;
-      console.log(this.projects);
+      // console.log(this.projects);
     })
    }
 
