@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { TweakService } from './tweak.service';
 import { HomepageTweak } from './Homepage';
 import { Subscription } from 'rxjs';
-import { ProjectService } from './project.service';
 
 @Component({
   selector: 'app-home',
@@ -18,12 +17,7 @@ projectSub: Subscription;
   constructor(
     private router: Router,
     private tweakService: TweakService,
-    private projectService: ProjectService
   ) {
-    this.projectSub = this.projectService.getProjects().subscribe(data => {
-      this.projects = data;
-      // console.log(this.projects);
-    })
    }
 
   ngOnInit() {
@@ -42,7 +36,6 @@ projectSub: Subscription;
 
   ngOnDestroy() {
     this.tweakServiceSub.unsubscribe();
-    this.projectSub.unsubscribe();
   }
 
 }

@@ -8,7 +8,7 @@
     <p class="text-2 quote">{{tweakData.smBio}}</p>
   </section>
   <hr color="#FF1D53" style="border-bottom: 1px; width: 80%;">
-  <section class="description">
+  <section class="description" *ngIf = "tweakData">
     <h1 class="head-2">{{tweakData.hWhatIDo}}</h1>
     <p class="text-1 just">
       {{tweakData.cWhatIDo}} <br><br>
@@ -17,8 +17,8 @@
     <!-- <a (click)="description()" class="link">Read More</a> -->
   </section><p></p>
 
-  <section class = "techstack">
-    <h1 class="stiff" style="color: #FF1D53">{{tweakData.hTech}}</h1>
+  <section class = "techstack" *ngIf = "tweakData">
+    <h1 class="stiff" style="color: #ff3364">{{tweakData.hTech}}</h1>
     <p class="text-1">
       {{tweakData.cTech}}
       <br> Just to name a few :
@@ -33,17 +33,6 @@
   </section>
   <p></p>
 <!-- 
-  <hr color="#FF1D53" style="border-bottom: 1px; width: 80%;">
-
-  <section style="width: 100%;">
-    <h1 class="stiff" style= "color: #FF1D53;">Projects</h1>
-    <br> <div *ngIf="projects">
-      <div style="text-align: left;" *ngFor="let project of projects">
-      
-        <h2 class="head-2">{{ project.name }}</h2>
-        <p class="text-1 just" style="text-align: left;">{{ project.description }}</p>
-        <a (click)="visitProject(project.url)" class="link">Visit Site</a>
-        <br><p>
-        </div>
-    </div>
+  <section class="projects">
+    <h1 class="stiff" style="color: #ff3364">My Projects</h1>
   </section> -->
