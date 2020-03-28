@@ -30,7 +30,7 @@ projectSub: Subscription;
       this.router.navigateByUrl('/about').then();
   }
 
-  visitProject(url) {
+  visitProject(url: string) {
     return window.open(url, '_self');
   }
 
