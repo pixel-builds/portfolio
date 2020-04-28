@@ -27,7 +27,7 @@ projectSub: Subscription;
   }
 
   description() {
-      this.router.navigateByUrl('/about').then();
+      this.router.navigateByUrl('/about');
   }
 
   visitProject(url: string) {
