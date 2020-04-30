@@ -17,8 +17,7 @@ projectSub: Subscription;
   constructor(
     private router: Router,
     private tweakService: TweakService,
-  ) {
-   }
+  ) {}
 
   ngOnInit() {
     this.tweakServiceSub = this.tweakService.tweakData$.subscribe( (data: any) => {
@@ -27,7 +26,7 @@ projectSub: Subscription;
   }
 
   description() {
-      this.router.navigateByUrl('/about');
+      this.router.navigateByUrl('/myinterests');
   }
 
   visitProject(url: string) {

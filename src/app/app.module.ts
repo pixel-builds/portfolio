@@ -33,7 +33,7 @@ import {TweakService} from './home/tweak.service';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [PostService, TweakService],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 export interface Blog {
     title?: string;
-    mdSrc?: string;
+    name?: string;
     date?: string;
 }

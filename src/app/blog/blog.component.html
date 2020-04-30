@@ -1,1 +1,4 @@
 <p>blog works!</p>
+<div *ngFor="let blog of blogs">
+    {{ blog.date.seconds * 1000 | date:'MM-dd-yyyy' }}
+</div>
