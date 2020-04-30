@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'myinterests', component: MyDetailsComponent },
   // { path: 'posts', component: PostsComponent },
   { path: 'blogs', component: BlogComponent },
-  { path: 'blogs/:id', component: BlogDetailsComponent }
+  { path: 'blogs/:name', component: BlogDetailsComponent }
 ];
 
 @NgModule({

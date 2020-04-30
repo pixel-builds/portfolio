@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
-import { SafeHtml } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog-details',
@@ -8,11 +8,16 @@ import { SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./blog-details.component.sass'],
 })
 export class BlogDetailsComponent implements OnInit {
-  text: SafeHtml;
-  constructor(private blogService: BlogService) { }
+  constructor(private blogService: BlogService, private route: ActivatedRoute) {
+    this.route.params.subscribe((params: any) => {
+      console.log(params)
+    })
+   }
 
   ngOnInit() {
-    this.text = this.blogService.convertMd('# Helloworld!')
+    this.blogService.getBlog('README').subscribe((data: any) => {
+      console.log(atob(data.content))
+    })
   }
 
 }

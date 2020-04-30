@@ -35,4 +35,8 @@ export class BlogService {
   getBlogs() {
     return this.afs.collection('blogs').valueChanges()
   }
+
+  getBlog(name) {
+    return this.http.get('https://api.github.com/repos/ujjwal-kr/blog-db/contents' +name+ '.md');
+  }
 }
