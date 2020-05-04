@@ -18,7 +18,7 @@ blogsSub: Subscription;
 
   ngOnInit() {
     this.blogsSub = this.blogService.getBlogs().subscribe((blogs: Blog[]) => {
-      this.blogs = blogs;
+      this.blogs = blogs.reverse();
     })
   }
 

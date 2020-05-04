@@ -33,7 +33,7 @@ export class BlogService {
   }
 
   getBlogs() {
-    return this.afs.collection('blogs').valueChanges()
+    return this.afs.collection('blogs', ref => ref.orderBy('date')).valueChanges()
   }
 
   getBlog(name: string) {
