@@ -18,25 +18,25 @@ export class BlogService {
   constructor(private afs: AngularFirestore,
     private http: HttpClient,
     private sanitizer: DomSanitizer
-    ) {
-      this.md = marked;
-      this.md.setOptions({
-        gfm: true,
-        breaks: true
-      })
+  ) {
+    this.md = marked;
+    this.md.setOptions({
+      gfm: true,
+      breaks: true
+    })
   }
 
-    convertMd(value: string): SafeHtml {
-        const html = this.md(value);
-        const safeHtml = DOMPurify.sanitize(html);
-        return this.sanitizer.bypassSecurityTrustHtml(safeHtml);
-    }
+  convertMd(value: string): SafeHtml {
+    const html = this.md(value);
+    const safeHtml = DOMPurify.sanitize(html);
+    return this.sanitizer.bypassSecurityTrustHtml(safeHtml);
+  }
 
   getBlogs() {
     return this.afs.collection('blogs').valueChanges()
   }
 
-  getBlog(name) {
-    return this.http.get('https://api.github.com/repos/ujjwal-kr/blog-db/contents' +name+ '.md');
+  getBlog(name: string) {
+    return this.http.get('https://api.github.com/repos/ujjwal-kr/blog-db/contents/' + name + '.md');
   }
 }

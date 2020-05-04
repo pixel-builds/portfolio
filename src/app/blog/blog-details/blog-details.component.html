@@ -1,1 +1,6 @@
-<div [innerHTML] = "blog"></div>
+<main>
+    <div class="loading" *ngIf="!blog">
+        <loading></loading>
+    </div>
+    <div *ngIf="blog" [innerHTML] = "blog"></div>
+</main>

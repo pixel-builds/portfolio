@@ -1,4 +1,16 @@
-<p>blog works!</p>
-<div *ngFor="let blog of blogs">
-    {{ blog.date.seconds * 1000 | date:'MM-dd-yyyy' }}
-</div>
+<main class="text-1">
+    <h1>My blogs</h1>
+    
+    <div class="loading" *ngIf="!blogs">
+        <loading></loading>
+    </div>
+
+    <div *ngIf="blogs">
+        <section *ngFor="let blog of blogs" (click) = "visitBlog(blog.name)">
+            <h1>{{ blog.title }}</h1>
+            <p class="description">{{ blog.description }}</p>
+            <p class="date">{{ blog.date.seconds * 1000 | date:'MM-dd-yyyy' }}</p>
+            <hr>
+        </section>
+    </div>
+</main>
