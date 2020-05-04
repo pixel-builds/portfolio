@@ -1,5 +1,5 @@
-<main class="text-1">
-    <h1>My blogs</h1>
+<main class="hand">
+    <h1 class="hand-2">My blogs</h1>
     
     <div class="loading" *ngIf="!blogs">
         <loading></loading>
@@ -10,7 +10,7 @@
             <h2>{{ blog.title }}</h2>
             <p class="description">{{ blog.description }}</p>
             <p class="date">{{ blog.date.seconds * 1000 | date:'MM-dd-yyyy' }}</p>
-            <hr>
+            <hr color="#FF1D53" style="border-bottom: 1px;">
         </section>
     </div>
 </main>
