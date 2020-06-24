@@ -5,22 +5,22 @@
 </main>
   <section class="avatar-description">
     <img src="../../assets/me.jpeg" class="avatar">
-    <p *ngIf="tweakData" class="text-2 quote">{{tweakData.smBio}}</p>
+    <p class="text-2 quote">I am a Full Stack ninja, designer, blogger, and a good and full-time human being</p>
   </section>
   <hr color="#FF1D53" style="border-bottom: 1px; width: 80%;">
-  <section class="description" *ngIf = "tweakData">
-    <h1 class="head-2">{{tweakData.hWhatIDo}}</h1>
+  <section class="description">
+    <h1 class="head-2">But Basically what i do</h1>
     <p class="text-1 just">
-      {{tweakData.cWhatIDo}} <br><br>
+      I, am just a super curious guy. I am a student, so the maximum part of my day drains in study stuff and in the part left I try to enjoy or make cool stuff. This website exists to share my ideas and the theories that interest me. I build custom software and services, but there's a lot more into it. <br><br>
     I will be sharing all kinds of logic, reasoning, and problems encountered during the process of engineering apps, services and other systems, with a combination of innovation and storytelling.
     </p>
-    <a (click)="description()" class="link">Read More</a>
+    <!-- <a (click)="description()" class="link">Read More</a> -->
   </section><p></p>
 
-  <section class = "techstack" *ngIf = "tweakData">
-    <h1 class="stiff" style="color: #ff3364">{{tweakData.hTech}}</h1>
+  <section class = "techstack">
+    <h1 class="stiff" style="color: #ff3364">Tech Stack</h1>
     <p class="text-1">
-      {{tweakData.cTech}}
+      I tend to learn all the awesome things which inspire me in the dev-market and try to create almost everything which strikes my mind.
       <br> Just to name a few :
     </p>
     <img src="../../assets/iconfinder_187_Js_logo_logos_4373213.png" class="techlogo">
@@ -33,7 +33,7 @@
   </section>
   <p></p>
 
-  <section class="stuff" *ngIf = "tweakData">
+  <section class="stuff">
     <h1 class="stiff" style="color: #00ceb6;">What I Created</h1>
     <p class="text-1">
       As said, I'm curious about cool stuff, so I try to shape my ideas all the time by creating small projects, here are few and more are about to come
@@ -47,7 +47,7 @@
     </div>
   </section>
 
-  <section class="stuff" *ngIf = "tweakData">
+  <section class="stuff">
     <h1 class="stiff" style="color: #4300e0;">Future Ventures</h1>
     <p class="text-1">I have a basic idea about what stuff I know but still following the popular belief, I also sometimes want to expand my area of knowledge and set of skills. Here's what I have planned to learn in future:</p>
     <div id="lists" class="text-1">
@@ -61,8 +61,3 @@
     </div>
   </section>
   <p></p>
-
-<!-- 
-  <section class="projects">
-    <h1 class="stiff" style="color: #ff3364">My Projects</h1>
-  </section> -->
